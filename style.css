@@ -1,0 +1,185 @@
+:root{
+    --primary-color: #e50914;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #999;
+}
+
+ul{
+    list-style: none;
+    display: block;
+}
+
+h1,h2,h3{
+    color: aliceblue;
+    text-align: center;
+    /* padding: 10px; */
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    border: 0;
+}
+
+.showcase{
+    background: url(./img/NetflixBackground) no-repeat center center/cover; /*!Tekrar etmeyecek, ortalanacak, merkeze doğru sıkıştırılacak*/
+    background-position: 0 0;
+    padding: 30px 50px;
+    height: 100%;
+    border-bottom: 9px solid rgb(27, 27, 27);
+    margin: 0;
+    position: relative;
+}
+
+.showcase::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100.5%;
+    z-index: 1;
+    background: rgb(0, 20, 0, 0.6); /*! 0.6 opacity*/
+    box-shadow: inset 20px 20px 150px #000000, inset -20px -10px -150px #000000;
+}
+
+.showcase-top{
+    max-width: 1850px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 175px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.showcase-top img{
+    position: relative;
+    height: 70px;
+    width: 140px;
+}
+
+.showcase-top a{
+    font-size: medium;
+    background-color: var(--primary-color);
+    height: 30px;
+    width: 70px;
+    position: relative;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 4px;
+}
+
+.showcase-content{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.showcase-content-h1{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
+}
+
+.showcase-content-h2{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.25;
+}
+
+.showcase-content-h3{
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.showcase-content-h1, .showcase-content-h2{
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.showcase-content .showcase-content-h2{
+    margin: 1rem auto;
+}
+
+.showcase-content .showcase-content-h3{
+    margin: 1rem auto;
+}
+
+.input-id{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    padding: 0 20px; /*! top-bottom 0, right-left 20px*/
+}
+
+.input-email{
+    max-width: 450px;
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    height: 60px;
+    font-size: 20px;
+    z-index: 2;
+}
+
+
+
+.btn{
+    background-color: var(--primary-color);
+    text-align: center;
+    display: inline-block;
+    color: white;
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer; /*! üzerine gelindiğinde el işareti olması için*/
+    margin: 0.5rem;
+    outline: none;
+    border-radius: 4px;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.btn:hover{
+    opacity: 200;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(255, 0, 0);
+}
+
+.btn-signIn{
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.btn-signIn:hover{
+    opacity: 200;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(255, 0, 0);
+    
+}
